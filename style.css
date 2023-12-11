@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +9,8 @@
 body {
     background-color:darkgray;
     color:aliceblue;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
 }
 #container {
     display: grid;
@@ -24,23 +27,17 @@ body {
     display: flex;
     padding-bottom: 10px;
     flex-direction: row-reverse;
-    background-color: #FFB74D;
+    background-color: #50340f;
     justify-content:space-evenly;
     align-items: flex-end;
 }
-
-/* #textArea > p {
-    position: relative;
-    right: 1rem;
-    bottom: 1rem;
-} */
 
 #operators {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(4, auto);
     text-align: center;
-    background-color:#8BC34A;
+    background-color:#00897B;
 }
 
 .items {
@@ -53,5 +50,9 @@ body {
 
 #clear {
     grid-column-start: 1;
+    grid-column-end: 3;
+}
+#all-clear {
+    grid-column-start: 3;
     grid-column-end: 5;
 }
