@@ -17,7 +17,6 @@ multiply.addEventListener('click', () => {
     if(calculation !== "" && operators.every(operator => (operator !== calculation[calculation.length - 1]))){
         calculation += '*';
         text.innerText = calculation;
-        console.log(calculation)
     }
 });
 
@@ -46,11 +45,17 @@ let minus = document.querySelector('#minus');
 minus.addEventListener('click', () => {
     if(calculation && operators.every(operator => (operator !== calculation[calculation.length - 1]))){
         calculation += minus.innerText;
+        text.innerText = calculation;
+        console.log(calculation)
+    } else if (calculation && calculation[calculation.length - 1] == '*') {
+        calculation += minus.innerText;
+        text.innerText = calculation;
         console.log(calculation)
     } else if (calculation && operators.some(operator => (operator === calculation[calculation.length - 1]))){
-        
-    } else{
+        calculation = calculation;
+    } else {
         calculation = minus.innerText;
+        text.innerText = calculation;
         console.log(calculation)
     }
 });
@@ -58,8 +63,19 @@ minus.addEventListener('click', () => {
 //EQUALS
 let equals = document.getElementById('equals');
 equals.addEventListener('click', () => {
-    text.innerText = eval(calculation);
-    calculation = Number(text.innerText);
+    if(calculation) {
+        text.innerText = eval(calculation);
+        calculation = text.innerText;
+    }
+});
+
+//CLEAR
+let clear = document.querySelector('#clear');
+clear.addEventListener('click', () => {
+    if(calculation) {
+        calculation = calculation.substring(0, calculation.length - 1);
+        text.innerText = calculation;
+    }
 });
 
 //ALL CLEAR

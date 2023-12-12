@@ -7,17 +7,21 @@
 }
 
 body {
-    background-color:darkgray;
+    background-image: url(imgs/red-clouds.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
     color:aliceblue;
     font-size: 2.5rem;
     font-family: 'Pacifico', cursive;
 }
 #container {
     display: grid;
-    margin: auto;
+    margin: 1rem auto;
     margin-top: 1rem;
     min-height: 100vh;
-    width: 50%;
+    max-height: 150vh;
+    max-width: 50%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
     grid-gap: 2rem;
@@ -25,24 +29,27 @@ body {
 
 #textArea {
     display: flex;
-    padding-bottom: 10px;
-    flex-direction: row-reverse;
-    background-color: #50340f;
-    justify-content:space-evenly;
-    align-items: flex-end;
+    padding: 1rem 2rem;
+    background-color: rgb(0 0 0 / 37%);
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
 }
 
 #operators {
     display: grid;
+    max-height: 37rem;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(4, auto);
     text-align: center;
-    background-color:#00897B;
+    background-color:#394e7aab;
+    border-radius: 0.5rem;
 }
 
 .items {
     border: 2px solid aliceblue;
-    height: 100%;
+    border-radius: 0.5rem;
+    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
