@@ -63,3 +63,10 @@ body {
     grid-column-start: 3;
     grid-column-end: 5;
 }
+
+@media only screen and (max-width: 725px) {
+    #container {
+        max-width: 70%;
+        font-size: 2rem;
+    }
+}
