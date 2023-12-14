@@ -17,8 +17,8 @@ body {
 }
 #container {
     display: grid;
-    margin: 1rem auto;
-    margin-top: 1rem;
+    margin: auto;
+    padding: 1rem;
     min-height: 100vh;
     max-height: 150vh;
     max-width: 50%;
